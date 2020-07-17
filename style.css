@@ -71,7 +71,7 @@ body {
 
 .admin-heading img {
     height: 40px;
-    float: right;
+    /* float: right; */
     /* width: 30px; */
 }
 
