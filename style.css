@@ -1,0 +1,284 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(230, 230, 255);
+}
+
+.wrapper {
+    display: flex;
+    position: relative;
+}
+
+.wrapper .sidebar {
+    /* display: flex; */
+    /* flex-direction: column; */
+    height: 100vh;
+    width: 200px;
+    background-color: #01081F;
+    padding: 30px 0;
+    /* justify-content: space-around;
+    align-items: flex-start; */
+}
+
+.logo {
+    margin-left: 5px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #8391A7;
+}
+
+.logo h1 {
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 5px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: normal;
+    padding-bottom: 20px;
+}
+
+.navtabs {
+    /* padding: 5px; */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    width: -webkit-fill-available;
+    align-items: center;
+    justify-content: flex-start;
+    /* margin-left: 10%; */
+    /* margin-bottom: 1%; */
+}
+
+.navtabs .active-rectangle {
+    background-color: #2789E9;
+    width: 3px;
+    border-radius: 0px 5px 5px 0px;
+    height: 30px;
+    margin-right: 10px;
+    visibility: hidden;
+}
+
+.navtabs a {
+    text-decoration: none;
+    color: #8391A7;
+    font-family: system-ui;
+    font-size: 14px;
+    /* align-self: flex-start; */
+    display: block;
+    margin-left: 5%;
+}
+
+.icons {
+    margin-right: 5%;
+    margin-top: 3%;
+    padding: 1%;
+}
+
+.icons img {
+    height: 15px;
+    width: 15px;
+}
+
+.navtabs:hover {
+    background-color: #151C32;
+    cursor: pointer;
+}
+
+.navtabs:hover div {
+    visibility: visible;
+}
+
+.navtabs:active div {
+    visibility: visible;
+}
+
+.navtabs:active a {
+    color: #ffffff;
+}
+
+/* .navtabs .active-rectangle {
+    position: absolute;
+    background-color: #2789E9;
+    border-radius: 0px 5px 5px 0px;
+    width: 5px;
+} */
+
+.admin-heading {
+    align-self: flex-start;
+    position: relative;
+}
+
+.main-content {
+    align-self: center;
+}
+
+.main-content .content-heading {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.main-content .content-heading h1 {
+    margin-left: 5%;
+    font-family: system-ui;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: normal;
+}
+
+.main-content .content-heading button {
+    border-radius: 8px;
+    padding: 1em;
+    background-color: #2789E9;
+    font-family: system-ui;
+    color: #ffffff;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.content {
+    border: 1px solid #bdbdbd;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.content .tablehead {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #bdbdbd;
+}
+
+.content .tablehead img {
+    width: 25px;
+    height: 25px;
+    margin-right: 3%;
+    cursor: pointer;
+}
+
+.content .tablehead input {
+    margin-right: 2%;
+    background-color: #F1F2F6;
+    border-radius: 5px;
+    padding: 10px;
+    border-width: 1px;
+}
+
+.content .tablehead h2 {
+    margin-right: auto;
+    margin-left: 10%;
+}
+
+.table {
+    align-self: center;
+    margin-top: 3%;
+    justify-content: space-evenly;
+}
+
+.table table {
+    border-spacing: 55px;
+}
+
+.table table thead tr {
+    padding: 5px;
+    /* border: 1px solid grey; */
+}
+
+.table table thead tr th {
+    font-family: system-ui;
+    font-size: 15px;
+    color: #1C2C40;
+    padding: 5px;
+    text-align: left;
+}
+
+#imgcell {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.categoryimg {
+    background-image: url("Images/mineralsImg.jpg");
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 3%;
+}
+
+/* The switch - the box around the slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* 
+@media screen and  */
