@@ -61,6 +61,20 @@ body {
     visibility: hidden;
 }
 
+.admin-heading {
+    /* align-self: flex-start; */
+    position: absolute;
+    top: 5px;
+    left: 92vw;
+    padding: 5px;
+}
+
+.admin-heading img {
+    height: 40px;
+    float: right;
+    /* width: 30px; */
+}
+
 .navtabs a {
     text-decoration: none;
     color: #8391A7;
@@ -105,11 +119,6 @@ body {
     border-radius: 0px 5px 5px 0px;
     width: 5px;
 } */
-
-.admin-heading {
-    align-self: flex-start;
-    position: relative;
-}
 
 .main-content {
     align-self: center;
